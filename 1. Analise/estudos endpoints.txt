@@ -1,0 +1,173 @@
+
+
+/POST(1)      /funcionario/login
+
+request
+{
+    "email": '',
+    "senha": ''
+}
+
+response
+{
+    "id": 0,
+    "email": '',
+    "nome": ''
+}
+
+/////////////////////////////////////////////////////////////////
+
+/POST(2)       /servicos/
+request
+{
+    "nome": " ",
+    "Email": " ",
+    "CPF": " ",
+    "MarcaCelular": " ",
+    "ModeloCelular": " ",
+    "Entrega": "2022-01-01",
+    "Devolucao": "2022-01-5",
+    "Preco": 0.0,
+    "Problema Celular": " ",
+    "Telefone": " "
+
+}
+response (200)
+{
+    "id": 0,
+    "nome": " ",
+    "Email": " ",
+    "CPF": " ",
+    "Marca Celular": " ",
+    "Modelo Celular": " ",
+    "Entrega": "2022-01-01",
+    "Devolucao": "2022-01-5",
+    "Preco": 0.0,
+    "Problema Celular": " ",
+    "Telefone": " "
+}
+
+/////////////////////////////////////////////////////////////////
+
+/GET(3)            /servicos
+request
+[
+    {
+        "id": 0,
+        "nome": " ",
+        "CPF": " "
+    }
+]
+response
+[
+    {
+        "id": 0
+        "nome": " ",
+        "Email": " ",
+        "CPF": " ",
+        "Marca Celular": " ",
+        "Modelo Celular": " ",
+        "Entrega": "2022-01-01",
+        "Devolucao": "2022-01-5",
+        "Preco": 0.0,
+        "Problema Celular": " ",
+        "Telefone": " "
+    }
+]
+
+/////////////////////////////////////////////////////////////////
+
+/GET(4)            /servicos/:nome
+request
+[
+    {
+        "id": 0,
+        "nome": " ",
+        "CPF": " "
+    }
+]
+response
+[
+    {
+        "id": 0
+        "nome": " ",
+        "Email": " ",
+        "CPF": " ",
+        "Marca Celular": " ",
+        "Modelo Celular": " ",
+        "Entrega": "2022-01-01",
+        "Devolucao": "2022-01-5",
+        "Preco": 0.0,
+        "Problema Celular": " ",
+        "Telefone": " "
+    }
+]
+
+/////////////////////////////////////////////////////////////////
+
+/GET(4.1)           /servicos/cpf/:CPF
+request
+[
+    {
+        "id": 0,
+        "nome": " ",
+        "CPF": " "
+    }
+]
+response
+[
+    {
+        "id": 0
+        "nome": " ",
+        "Email": " ",
+        "CPF": " ",
+        "Marca Celular": " ",
+        "Modelo Celular": " ",
+        "Entrega": "2022-01-01",
+        "Devolucao": "2022-01-5",
+        "Preco": 0.0,
+        "Problema Celular": " ",
+        "Telefone": " "   
+    }
+]
+
+/////////////////////////////////////////////////////////////////
+
+/PUT(5)             /servicos/:id
+request body
+{
+    "nome": " ",
+    "Email": " ",
+    "CPF": " ",
+    "Marca Celular": " ",
+    "Modelo Celular": " ",
+    "Entrega": "2022-01-01",
+    "Devolucao": "2022-01-5",
+    "Preco": 0.0,
+    "Problema Celular": " ",
+    "Telefone": " "   
+}
+response(204)
+-- sem conteudo 
+
+
+/////////////////////////////////////////////////////////////////
+
+/DELETE(6)             /servicos/
+request body
+{
+    "id": 0
+    "nome": " ",
+    "Email": " ",
+    "CPF": " ",
+    "Marca Celular": " ",
+    "Modelo Celular": " ",
+    "Entrega": "2022-01-01",
+    "Devolucao": "2022-01-5",
+    "Preco": 0.0,
+    "Problema Celular": " ",
+    "Telefone": " "   
+}
+
+response(204)
+-- sem conteudo
