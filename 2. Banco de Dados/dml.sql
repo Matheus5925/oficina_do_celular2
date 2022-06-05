@@ -21,22 +21,25 @@ insert into tb_servicos
         
 
 -- CSU(3) Consultar Servicos
-select id_servicos as servicos,
+select id_servicos as id,
         nm_cliente as nome, 
         ds_cpf as cpf
     from tb_servicos;
 
 
--- CSU(4) Consultar Servicos por Nome e CPF
-select id_usuario as id,
-		nm_cliente as Nome, ds_email_cliente as Email,
-        ds_cpf as CPF, ds_marca_celular as MarcaCelular,
-        ds_modelo_cel as ModeloCelular, dt_entrega as Entrega,
-        dt_devolucao as Devolução, vl_preco as Preço,
-        ds_problema_cel as Defeito, ds_telefone as Telefone
-	from tb_funcionario
-    where nm_funcionario like "%a%" 
-    and ds_cpf like "%5%";
+-- CSU(4) Consultar Servicos por Nome
+    select id_servicos as id,
+        nm_cliente as nome, 
+        ds_cpf as cpf
+    from tb_servicos
+    WHERE nm_cliente like '%a%';
+
+-- CSU(4.1) Consultar Servicos por CPF
+	select id_servicos as id,
+        nm_cliente as nome, 
+        ds_cpf as cpf
+    from tb_servicos
+    WHERE ds_cpf like '%3%';
     
     
 -- CSU(5) Editar servico

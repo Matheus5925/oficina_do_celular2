@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { Servicos, ListarTodosServicos } from "../repository/servicosRepository.js";
+import { Servicos, ListarTodosServicos, BuscarPorNome, BuscarPorCPF, DeletarServico } from "../repository/servicosRepository.js";
 
 const server = Router();
 
@@ -39,6 +39,50 @@ server.get('/servicos',  async (req, resp) =>{
     try {
         const result = await ListarTodosServicos();
         resp.send(result)
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+server.get('/servicos/nome', async (req, resp) =>{
+    try {
+        const { nome } = req.query;
+        const resposta = await BuscarPorNome(nome);
+        if (!resposta)
+            throw new Error('Cliente não encontrado!')
+
+        resp.send(resposta)
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+server.get('/servicos/CPF', async (req, resp) =>{
+    try {
+        const { cpf } = req.query;
+        const resposta = await BuscarPorCPF(cpf);
+        if (!resposta)
+            throw new Error('Cliente não encontrado!')
+
+        resp.send(resposta)
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+server.delete('/servico/:id', async (req, resp) =>{
+    const { id } = req.params;
+    const resposta = await DeletarServico(id);
+    resp.status(204).send()
+    try {
+        const { id } = req.params;
+        const resposta = await DeletarServico(id);
     } catch (err) {
         resp.status(400).send({
             erro: err.message
