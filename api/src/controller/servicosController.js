@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { Servicos, ListarTodosServicos, BuscarPorNome, BuscarPorCPF, DeletarServico } from "../repository/servicosRepository.js";
+import { Servicos, ListarTodosServicos, BuscarPorNome, BuscarPorCPF, DeletarServico, AlterarServicos } from "../repository/servicosRepository.js";
 
 const server = Router();
 
@@ -83,6 +83,44 @@ server.delete('/servico/:id', async (req, resp) =>{
     try {
         const { id } = req.params;
         const resposta = await DeletarServico(id);
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+server.put('/filmes/:id', async (req, resp) =>{
+   
+    try {
+        const { id } = req.params;
+        const filmes = req.body;
+        const resposta = await AlterarServicos(id, filmes);
+
+        if (resposta != 1) {
+            throw new Error('Filme não pode ser alterado!!');
+        }
+
+    if (!Servicos.nome) 
+        throw new Error("Nome obrigátorio")
+    if (!Servicos.email) 
+        throw new Error("Email obrigátorio")
+    if (!Servicos.cpf) 
+        throw new Error("cpf obrigátorio")
+    if (!Servicos.MarcaCelular) 
+        throw new Error("Marca do Dispositivo obrigátorio")
+    if (!Servicos.ModeloCelular) 
+        throw new Error("Modelo do Dispositivo obrigátorio")
+    if (!Servicos.preco) 
+        throw new Error("Preço obrigátorio")
+    if (!Servicos.problema) 
+        throw new Error("Os defeitos do aparelho são obrigátorio")
+    if (!Servicos.telefone) 
+        throw new Error("Telefone para contato obrigátorio")
+    else{
+            resp.status(204).send();
+        }
+        
     } catch (err) {
         resp.status(400).send({
             erro: err.message
