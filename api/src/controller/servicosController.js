@@ -3,6 +3,8 @@ import { Servicos, ListarTodosServicos, BuscarPorNome, BuscarPorCPF, DeletarServ
 
 const server = Router();
 
+// Endpoint de cadastro de serviço para cliente
+
 server.post('/servicos', (req, resp) =>{
     const servicos = req.body;
     const result = Servicos(servicos)
@@ -33,6 +35,8 @@ server.post('/servicos', (req, resp) =>{
     }
 })
 
+// Endpoint para listar os serviços por id nome e cpf na busca geral
+
 
 server.get('/servicos',  async (req, resp) =>{
    
@@ -45,6 +49,8 @@ server.get('/servicos',  async (req, resp) =>{
         })
     }
 })
+
+// Busca por nome no input da tela de busca
 
 server.get('/servicos/nome', async (req, resp) =>{
     try {
@@ -61,6 +67,8 @@ server.get('/servicos/nome', async (req, resp) =>{
     }
 })
 
+// Busca por CPF na tela de busca
+
 server.get('/servicos/CPF', async (req, resp) =>{
     try {
         const { cpf } = req.query;
@@ -76,9 +84,11 @@ server.get('/servicos/CPF', async (req, resp) =>{
     }
 })
 
+
+// Endpoint para deletar algum serviço para cliente
+
 server.delete('/servico/:id', async (req, resp) =>{
-    const { id } = req.params;
-    const resposta = await DeletarServico(id);
+    
     resp.status(204).send()
     try {
         const { id } = req.params;
@@ -89,6 +99,8 @@ server.delete('/servico/:id', async (req, resp) =>{
         })
     }
 })
+
+// Endpoint de alteração de serviço
 
 server.put('/filmes/:id', async (req, resp) =>{
    
@@ -101,7 +113,7 @@ server.put('/filmes/:id', async (req, resp) =>{
             throw new Error('Filme não pode ser alterado!!');
         }
 
-    if (!Servicos.nome) 
+        if (!Servicos.nome) 
         throw new Error("Nome obrigátorio")
     if (!Servicos.email) 
         throw new Error("Email obrigátorio")
