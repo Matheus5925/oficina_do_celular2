@@ -1,0 +1,152 @@
+.lateral-consulta{
+    
+    .imgs-cadas-consult{
+        height: 30px;
+        width: 30px;
+    }
+    
+    
+    .dahsboard-lateral{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #111112;
+        width: 155px;
+        height: 100vh;
+        padding-top: 2em;
+        
+    }
+    
+    .linha-divisoria{
+        width: 70%;
+        background-color: #B2B2B2;
+        height: 1;
+    }
+    
+    .cadastro-consulta{
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        justify-content: center;
+        margin-top: 0.5em;
+    
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        color: #f0f0f0;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .caixa-entrada > input {
+        width: 20em;
+        height: 2em;
+        color: #000000 !important;
+        padding: 0.8em 1.5em;
+        
+        
+    
+        background: #C4C4C4;
+        border-radius: 80px;
+        border: none;
+    }
+    
+    .caixa-entrada{
+        display: flex;
+        flex-direction: row;
+        
+        padding-top: 0em;
+        gap: 0.5em;
+       
+    }
+
+    @media (max-width: 1440px) {
+
+
+        .dahsboard-lateral{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #111112;
+            width: 190px;
+            height: 100vh;
+            padding-top: 2em;
+            
+        }
+
+       
+        .cadastro-consulta{
+            display: flex;
+            flex-direction: row;
+            gap: 1em;
+            justify-content: center;
+            margin-top: 0.5em;
+    
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            color: #f0f0f0 !important;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .dados-pesquisa > a{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            color: #000000 !important;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .consulta-pesquisa{
+            display: flex;
+            flex-direction: column;
+            max-width: 70em;
+            padding-top: 2em;
+        }
+
+        .caixa-entrada > input {
+            width: 20em;
+            height: 2.6em;
+            color: #000000 !important;
+            padding: 0.8em 1.5em;
+            
+            
+        
+            background: #C4C4C4;
+            border-radius: 80px;
+            border: none;
+        }
+
+        .dados-pesquisa{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            padding-top: 2em;
+            justify-content: space-between;
+            gap: 2em;
+        }
+
+        .dados-pesquisa{
+            display: flex;
+            flex-direction: row;
+            
+            padding-top: 2em;
+            justify-content: space-between;
+            gap: 2.5em;
+        }
+
+        .pesquisa-consulta{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+    }
+
+}

@@ -1,0 +1,226 @@
+.Pagina-consultar{
+   
+    
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        
+    }
+    
+   
+    .entrada-formulario{
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        padding-top: 1em;
+        
+    }
+
+    .caixa-entrada{
+        display: flex;
+        flex-direction: row;
+        
+        padding-top: 0em;
+        gap: 0.5em;
+       
+    }
+
+    .caixa-entrada > input {
+        width: 20em;
+        height: 2em;
+        color: #000000 !important;
+        padding: 0.8em 1.5em;
+        
+        
+    
+        background: #C4C4C4;
+        border-radius: 80px;
+        border: none;
+    }
+    
+    table > td{
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        color: #000000 !important;
+        font-size: 14px;
+        cursor: pointer;
+    }
+   
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 40px;
+    }
+    
+    .edit-delete-consult{
+        height: 18px;
+        width: 18px;
+    }
+    
+    
+    
+    td > button{
+        cursor: pointer;
+        border: none;
+        background: none;
+        margin-right: 0em;
+    }
+    
+    .cadastro-consulta > a {
+        color: #f0f0f0 !important;
+    }
+    
+    .saida-landing{
+        margin-left: 52em;
+    }
+    
+    .img-saida{
+        height: 30px;
+        width: 30px;
+    }
+    
+    .pesquisa-consulta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        
+    }
+    .consulta-pesquisa{
+        display: flex;
+        flex-direction: column;
+        max-width: 55em;
+        padding-top: 2em;
+    }
+
+    th {
+        color: #000000 !important;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    td{
+        color: #000000 !important;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 10px 15px;
+        
+    }
+
+    
+    table tr:nth-child(even) {
+        background-color: #EDEDED;
+    }
+
+    table tr:hover {
+        background-color: #e1e1e1;
+    }
+
+   
+    @media (max-width: 1025px) {
+        header{
+            background: #111112;
+            height: 70px;
+            width: 100%;
+        }
+
+        .dahsboard-lateral{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #111112;
+            width: 150px;
+            height: 100vh;
+            padding-top: 2em;
+        }
+
+        .cadastro-consulta{
+            display: flex;
+            flex-direction: row;
+            gap: 1em;
+            justify-content: center;
+            margin-top: 0.2em;
+    
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            color: #f0f0f0 !important;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .nome-funcionario{
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            color: #f0f0f0 !important;
+            font-size: 14px;
+            
+        }
+
+        .status-funcionario{
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 19px;
+    
+            color: #B2B2B2;
+    
+        }
+
+        .image-header{
+            text-align: center;
+            padding-top: 1em;
+            border-radius: 80em;
+            background-color: #B2B2B2;
+            width: 3.5em;
+        }
+
+        .consulta-pesquisa{
+            display: flex;
+            flex-direction: column;
+            max-width: 70em;
+            padding-top: 2em;
+        }
+
+        .caixa-entrada > input {
+            width: 20em;
+            height: 2em;
+            color: #000000 !important;
+            padding: 0.8em 1.5em;
+            
+            
+        
+            background: #C4C4C4;
+            border-radius: 80px;
+            border: none;
+        }
+
+        .dados-pesquisa{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            padding-top: 0em;
+            justify-content: space-between;
+            gap: 2em;
+        }
+
+        
+        .pesquisa-consulta{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+    }
+
+    .cadastro-consulta:hover{
+        transform: scale(1.2);
+    }
+
+}

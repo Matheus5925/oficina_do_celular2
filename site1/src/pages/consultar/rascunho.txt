@@ -1,0 +1,78 @@
+  <div class="dados-pesquisa">
+                        <a id="ID" href=""> <strong>ID:</strong> #01</a>
+                        <a id="nome" href=""> <strong>Nome: </strong> Gabrielle Ueda Alencar</a>
+                        <a id="ID" href=""> <strong>CPF:</strong> XXX.XXX.XXX-XX</a>
+                        <div class="del-edit">
+                            <button>
+                                <img class="edit-delete-consult" src={lapisEdicao} alt=""/>
+                            </button>
+                            <button type="reset">
+                                <img class="edit-delete-consult" src={deletarConsulta} alt=""/>
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr class="separa-cont-consulta"></hr>
+
+                    <div class="dados-pesquisa">
+                        <a id="ID" href=""> <strong>ID:</strong> #02</a>
+                        <a id="nome" href=""> <strong>Nome: </strong> Milena Custodio Senna</a>
+                        <a id="ID" href=""> <strong>CPF:</strong> XXX.XXX.XXX-XX</a>
+                        <div class="del-edit">
+                            <button>
+                                <img class="edit-delete-consult" src={lapisEdicao} alt=""/>
+                            </button>
+                            <button type="reset">
+                                <img class="edit-delete-consult" src={deletarConsulta} alt=""/>
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr class="separa-cont-consulta"></hr>
+
+                    <div class="dados-pesquisa">
+                        <a id="ID" href=""> <strong>ID:</strong> #03</a>
+                        <a id="nome" href=""> <strong>Nome: </strong> Felipe Neres</a>
+                        <a id="ID" href=""> <strong>CPF:</strong> XXX.XXX.XXX-XX</a>
+                        <div class="del-edit">
+                            <button>
+                                <img class="edit-delete-consult" src={lapisEdicao} alt=""/>
+                            </button>
+                            <button type="reset">
+                                <img class="edit-delete-consult" src={deletarConsulta} alt=""/>
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr class="separa-cont-consulta"></hr>
+
+                    <div class="dados-pesquisa">
+                        <a id="ID" href=""> <strong>ID:</strong> #04</a>
+                        <a id="nome" href=""> <strong>Nome: </strong> Otavio De Jesus</a>
+                        <a id="ID" href=""> <strong>CPF:</strong> XXX.XXX.XXX-XX</a>
+                        <div class="del-edit">
+                            <button>
+                                <img class="edit-delete-consult" src={lapisEdicao} alt=""/>
+                            </button>
+                            <button type="reset">
+                                <img class="edit-delete-consult" src={deletarConsulta} alt=""/>
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr class="separa-cont-consulta"></hr>
+
+                    <div class="dados-pesquisa">
+                        <a id="ID" href=""> <strong>ID:</strong> #05</a>
+                        <a id="nome" href=""> <strong>Nome: </strong> Mariana Ferreira</a>
+                        <a id="ID" href=""> <strong>CPF:</strong> XXX.XXX.XXX-XX</a>
+                        <div class="del-edit">
+                            <button>
+                                <img class="edit-delete-consult" src={lapisEdicao} alt=""/>
+                            </button>
+                            <button type="reset">
+                                <img class="edit-delete-consult" src={deletarConsulta} alt=""/>
+                            </button>
+                        </div>
+                    </div>
+                    <hr class="separa-cont-consulta"></hr>
