@@ -1,11 +1,16 @@
-import axios from 'axios';
-import { useState} from 'react'
+import { login } from '../../api/funcionarioAPI.js';
+import storage from 'local-storage'
+import { useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import './index.scss';
 import '../../common/common.scss'
 
-import logoLogin from '../../assets/image/testelogo-2.png'
-import Saida from '../../assets/image/Foto-saida.png'
+import logoLogin from '../../assets/image/Logo-tela-login.png';
+import Saida from '../../assets/image/Foto-saida.png';
+
+
+
+
 export default function Login(){
     const [ email, setEmail] = useState('');
     const [ senha, setSenha] = useState('');
@@ -13,15 +18,19 @@ export default function Login(){
 
     const navigate = useNavigate();
 
-    
+    useEffect(() => {
+        if (storage('usuario-logado')) {
+            navigate('/');     
+        }
+    }, [])
+
     async function ClickEntrar() {
         try {
-            const resposta = await axios.post('http://localhost:5000/funcionario/login', {
-            email: email,
-            senha: senha
-        });
+            const resposta = await login(email, senha);
+            storage('usuario-logado', resposta)
 
             navigate('/menu');
+            
         } catch (err) {
             if (err.response.status === 401) {
                 setErro(err.response.data.erro)
@@ -33,7 +42,7 @@ export default function Login(){
         <div className="Pagina-login">
             <main>
                 <div class="atalho-saida">
-                    <img class="img-saida-topo" src={Saida} alt=""/>
+                    <img className='' class="img-saida-topo" src={Saida} alt=""/>
                     <a href="../Home/index.html">Exit</a>
                 </div>
                 <div class="cont-principal">
@@ -42,7 +51,7 @@ export default function Login(){
                     </div>
                     <div class="caixas-entrada">
                         <input type="email" placeholder='E-mail' value={email} onChange={e => setEmail(e.target.value)}></input>
-                        <input type= "passowrd" placeholder='Senha' value={senha} onChange={e => setSenha(e.target.value)}></input>
+                        <input type='password' placeholder='***' value={senha} onChange={e => setSenha(e.target.value)}></input>
                     </div>
                     <div className='msg-erro'>
                         {erro}
