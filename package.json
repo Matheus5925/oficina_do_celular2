@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "axios": "^0.27.2",
-    "local-storage": "^2.0.0",
-    "react-top-loading-bar": "^2.1.0"
+    "local-storage": "^2.0.0"
   }
 }
