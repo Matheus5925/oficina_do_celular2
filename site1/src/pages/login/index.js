@@ -41,7 +41,7 @@ export default function Login(){
     return(
         <div className="Pagina-login">
             <main>
-                <Link to='/' class="atalho-saida">
+                <Link to='/home' class="atalho-saida">
                     <img class="img-saida-topo" src={Saida} alt=""/>
                     <p>Exit</p>
                 </Link>
@@ -58,7 +58,7 @@ export default function Login(){
                     </div>
                     
                     <div class="botao-login">
-                        <button onClick={ClickEntrar}> Login </button>
+                        <button onClick={ClickEntrar}> Entrar </button>
                     </div>
                 </div>
             </main>

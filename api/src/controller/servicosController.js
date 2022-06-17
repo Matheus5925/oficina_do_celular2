@@ -22,7 +22,7 @@ server.post('/servicos', async (req, resp) =>{
         throw new Error("Preço obrigátorio")
     if (!servicos.problema) 
         throw new Error("Os defeitos do aparelho são obrigátorio")
-        if (!servicos.telefone) 
+    if (!servicos.telefone) 
         throw new Error("Telefone para contato obrigátorio")
     resp.send(result)
     try {

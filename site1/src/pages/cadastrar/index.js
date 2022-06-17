@@ -2,12 +2,14 @@ import './index.scss';
 import '../../common/common.scss'
 import Cabecalho from '../../components/cabecalho';
 import DashbordLateral from '../../components/lateral';
-import {  useState} from 'react'
+import { useState} from 'react'
 import { Link } from 'react-router-dom';
 
 
 import PortaSaida from '../../assets/image/Foto-saida.png';
 import { cadastrarServicos } from '../../api/servicosAPI';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Cadastrar(){
     const [nome, setNome] = useState('');
@@ -20,21 +22,20 @@ export default function Cadastrar(){
     const [devolucao, setDevolucao] = useState('');
     const [preco, setPreco] = useState(0);
     const [problema, setProblema] = useState('');
-    const [erro, setErro] = useState('')
 
     async function ClickCadastrar() {
           try {
-                const r = await cadastrarServicos(nome, email, telefone, cpf, MarcaCelular, ModeloCelular, entrega, 
-                    devolucao, preco, problema);
+                const r = await cadastrarServicos(nome, email, cpf, MarcaCelular, ModeloCelular, entrega, 
+                devolucao, preco, problema, telefone);
+                toast.success('filme cadastrado com sucesso')
           } catch (err) {
-              if (err.response.status === 401) {
-                    setErro(err.response.data.erro)
-              }
+                toast.warning(err.message)
           }
     }
 
     return(
         <div className="Pagina-cadastrar">
+            <ToastContainer />
             <Cabecalho></Cabecalho>
             <main>
                <DashbordLateral></DashbordLateral>
@@ -125,9 +126,7 @@ export default function Cadastrar(){
                         <div class="botao-login">
                             <button onClick={ClickCadastrar}> Cadastrar </button>
                         </div>
-                        <div className='msg-erro'>
-                            {erro}
-                        </div>
+                        
                     </form>
                 </section>
             </main>
