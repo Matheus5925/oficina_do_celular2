@@ -1,15 +1,20 @@
 import './index.scss';
 import setaFuncionario from '../../assets/image/Polygon 9.png';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import storage from 'local-storage';
 import { useNavigate } from 'react-router-dom';
 
 export default function Cabecalho() {
     const navigate = useNavigate();
+    const [funcionario, setFuncionario] = useState('-');
+
 
     useEffect(() => {
         if (!storage('usuario-logado')) {
             navigate('/')
+        } else{
+            const usuariologado = storage('usuario-logado');
+            setFuncionario(usuariologado.Nome)
         }
     }, [])
 
@@ -19,11 +24,11 @@ export default function Cabecalho() {
                 <div class="img-seta-div">
                     <img class="img-seta" src={setaFuncionario} alt=""/>
                 </div>
-                <div class="image-header">
-                    <input type="image" id="campo-imagem-funcionario" class="campo-imagem-funcionario" />
+                <div className='funcionario'>
+                    <span>{funcionario[0]}</span>
                 </div>
                 <div class="dados-funcionario-header">
-                    <a href="" class="nome-funcionario">Nome do funcionario</a>
+                    <a href="" class="nome-funcionario">{funcionario}</a>
                     <a href="" class="status-funcionario">Status</a>
                 </div>
             </div>

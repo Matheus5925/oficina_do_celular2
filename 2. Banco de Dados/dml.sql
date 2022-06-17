@@ -16,7 +16,7 @@ select  id_funcionario  as id,
 
 -- CSU(2) Cadastrar servico
 insert into tb_servicos
-(nm_cliente, ds_email_cliente, ds_cpf, ds_marca_celular, ds_modelo_cel, dt_entrega, dt_devolucao, vl_preco, ds_problema_cel, ds_telefone)
+(id_servicos  ,nm_cliente, ds_email_cliente, ds_cpf, ds_marca_celular, ds_modelo_cel, dt_entrega, dt_devolucao, vl_preco, ds_problema_cel, ds_telefone)
 		values("Otavio de Jesus","tatavio@gmail.com", "12345874814", "Xiaomi", "Redmi note10S", "2022-05-01", "2022-05-05", 85.20,"Botões laterais com defeito", "119881818186" );
         
 

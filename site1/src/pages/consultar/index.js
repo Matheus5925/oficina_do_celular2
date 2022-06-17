@@ -2,6 +2,7 @@ import './index.scss';
 import '../../common/common.scss'
 import Cabecalho from '../../components/cabecalho';
 import DashbordLateral from '../../components/lateral';
+import { Link } from 'react-router-dom';
 
 
 import PortaSaida from '../../assets/image/Foto-saida.png';
@@ -18,7 +19,7 @@ export default function Consultar(){
             
             <section class="pesquisa-consulta">
                 <div class="saida-landing">
-                    <a href="/menu"><img class="img-saida" src={PortaSaida} alt=""/></a>
+                    <Link to='/menu'><img class="img-saida" src={PortaSaida} alt=""/></Link>
                 </div>
                 <div class="consulta-pesquisa">
                     <div class="caixa-entrada">

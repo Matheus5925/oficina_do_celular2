@@ -1,7 +1,7 @@
 import { login } from '../../api/funcionarioAPI.js';
 import storage from 'local-storage'
 import { useEffect, useState} from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './index.scss';
 import '../../common/common.scss'
 
@@ -20,9 +20,9 @@ export default function Login(){
 
     useEffect(() => {
         if (storage('usuario-logado')) {
-            navigate('/');     
+            navigate('/')    
         }
-    }, [])
+    },[])
 
     async function ClickEntrar() {
         try {
@@ -41,10 +41,10 @@ export default function Login(){
     return(
         <div className="Pagina-login">
             <main>
-                <div class="atalho-saida">
-                    <img className='' class="img-saida-topo" src={Saida} alt=""/>
-                    <a href="../Home/index.html">Exit</a>
-                </div>
+                <Link to='/' class="atalho-saida">
+                    <img class="img-saida-topo" src={Saida} alt=""/>
+                    <p>Exit</p>
+                </Link>
                 <div class="cont-principal">
                     <div class="logo-empresa">
                         <img class="logo-empresa-img" src={logoLogin} alt=""/> 

@@ -2,6 +2,7 @@ import './detalhes.scss';
 import '../../common/common.scss'
 import Cabecalho from '../../components/cabecalho';
 import DashbordLateral from '../../components/lateral';
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,7 +16,7 @@ export default function ConsultaDetalhes(){
                <DashbordLateral></DashbordLateral>
                 <section class="form-parte2">
                     <div class="saida-landing">
-                        <a href="/consultar"><img class="img-saida" src={PortaSaida} alt=""/></a>
+                        <Link to='/consultar'><img class="img-saida" src={PortaSaida} alt=""/></Link>
                     </div>
                     <form class="formulario-de-cadastro" action="" method="post">
 
@@ -96,7 +97,7 @@ export default function ConsultaDetalhes(){
                                 <hr  width="350" class="separa-cont-consulta"/>
                             </div>
                         </div>
-
+                        
                     </form>
                 </section>
             </main>

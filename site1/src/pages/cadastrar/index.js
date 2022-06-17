@@ -2,7 +2,8 @@ import './index.scss';
 import '../../common/common.scss'
 import Cabecalho from '../../components/cabecalho';
 import DashbordLateral from '../../components/lateral';
-import { useEffect, useState} from 'react'
+import {  useState} from 'react'
+import { Link } from 'react-router-dom';
 
 
 import PortaSaida from '../../assets/image/Foto-saida.png';
@@ -15,8 +16,8 @@ export default function Cadastrar(){
     const [cpf, setCpf] = useState('');
     const [MarcaCelular, setMarcaCelular] = useState('');
     const [ModeloCelular, setModeloCelular] = useState('');
-    const [entrega, setEntrega] = useState(0);
-    const [devolucao, setDevolucao] = useState(0);
+    const [entrega, setEntrega] = useState('');
+    const [devolucao, setDevolucao] = useState('');
     const [preco, setPreco] = useState(0);
     const [problema, setProblema] = useState('');
     const [erro, setErro] = useState('')
@@ -39,7 +40,7 @@ export default function Cadastrar(){
                <DashbordLateral></DashbordLateral>
                 <section class="form-parte2">
                     <div class="saida-landing">
-                        <a href="/menu"><img class="img-saida" src={PortaSaida} alt=""/></a>
+                        <Link to='/menu'><img class="img-saida" src={PortaSaida} alt=""/></Link>
                     </div>
                     <form class="formulario-de-cadastro" action="" method="post">
 

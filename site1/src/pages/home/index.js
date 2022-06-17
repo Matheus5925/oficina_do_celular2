@@ -2,7 +2,7 @@ import './index.scss';
 import '../../common/common.scss'
 
 import ImgMenuHome from '../../assets/image/logo-menu-home.png';
-import ImgOndasUm from '../../assets/image/Primeiraonda-landingpage.png';
+//import ImgOndasUm from '../../assets/image/Primeiraonda-landingpage.png';
 import foneBlue from '../../assets/image/fone-produto.png';
 import Caixinha from '../../assets/image/caixasom-produto.png';
 import Carregador from '../../assets/image/carregador-portatil.png';

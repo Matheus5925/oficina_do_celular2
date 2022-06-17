@@ -5,9 +5,9 @@ const server = Router();
 
 // Endpoint de cadastro de serviço para cliente
 
-server.post('/servicos', (req, resp) =>{
+server.post('/servicos', async (req, resp) =>{
     const servicos = req.body;
-    const result = Servicos(servicos)
+    const result = await Servicos(servicos)
     if (!servicos.nome) 
         throw new Error("Nome obrigátorio")
     if (!servicos.email) 

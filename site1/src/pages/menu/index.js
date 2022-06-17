@@ -1,13 +1,11 @@
 import './index.scss';
 import '../../common/common.scss'
 import storage from 'local-storage'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Cabecalho from '../../components/cabecalho';
 import DashbordLateral from '../../components/lateral';
 import Saida from '../../assets/image/Foto-saida.png';
-
-
 
 
 
@@ -21,6 +19,7 @@ export default function Menu(){
 
     }
 
+
     return(
         <div className="Pagina-menu">
             <Cabecalho></Cabecalho>
@@ -28,10 +27,10 @@ export default function Menu(){
             <main>
                 <DashbordLateral></DashbordLateral>
                 <section class="segunda-parte">
-                <div onClick={SairClick} class="atalho-saida">
+                <Link to='/' onClick={SairClick} class="atalho-saida">
                     <img class="img-saida-topo" src={Saida} alt=""/>
-                    <a href="">Exit</a>
-                </div>
+                    <p>Exit</p>
+                </Link>
                 </section>
             </main>
         </div>

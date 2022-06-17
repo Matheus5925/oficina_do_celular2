@@ -7,7 +7,7 @@ export async function Servicos(servicos) {
 
     const [resposta] = await (await con).query(comando,[servicos.nome, servicos.email, servicos.cpf, servicos.MarcaCelular, servicos.ModeloCelular, servicos.entrega, servicos.devolucao, servicos.preco, servicos.problema, servicos.telefone])
     servicos.id = resposta.insertId;
-    return resposta;
+    return servicos;
 }
 
 
