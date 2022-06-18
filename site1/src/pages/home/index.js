@@ -85,6 +85,7 @@ export default function Home(){
                           <p className='p2'>Então ele saiu em busca dos melhores fornecedores de algunns contatos na área e no meio dessa correria toda ainda sim fez varios cursos  complementares para fornecer o melhor atendimento possivel para seus clientes e depois de muitas falhas e acertos ele conseguiu fazer sua tão esperada loj atingindo seu proposito. </p>
                         <p className = 'p3'>Agora seu  foco é na expansão e levar os excelentes serviços dele para outros lugares e virar um nome cada vez mais conhecido e temido no mercado. </p>
                     </div>
+                    
             </section>
             </main>
         </div>
