@@ -60,7 +60,7 @@
     }
 
     .faixa-2-produtos{
-        background-color: #f0f0f0;
+        background-color: #ffffff;
         display: flex;
         flex-direction: column;
         gap: 3em;
@@ -120,6 +120,28 @@
     .img-seta-produto{
         height: 50px;
         width: 50px;
+    }
+
+    .textos{
+        
+        background-image: url('../../assets/image/Design\ sem\ nome\ \(5\)\ 1.png');
+        background-repeat: no-repeat;
+        display:inline;
+        background-size: 100%;
+        height: 240px;
+    }
+
+    .TITULO{
+        font-size: 1.5em;
+        color: #ffffff;
+        text-align: center;
+    }
+    .p1{
+        font-size: 15px;
+        color: #ffffff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        width: 20em;
+
     }
 
    
