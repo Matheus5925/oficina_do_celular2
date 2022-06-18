@@ -8,7 +8,7 @@ import Caixinha from '../../assets/image/caixasom-produto.png';
 import Carregador from '../../assets/image/carregador-portatil.png';
 import relogio from '../../assets/image/relogio-produto.png';
 import SetaEsquerda from '../../assets/image/porta-2.png';
-import SetaDireira from '../../assets/image/porta-1.png';
+import SetaDireira from '../../assets/image/porta-1.png'
 import { Link } from 'react-router-dom';
 
 export default function Home(){
@@ -78,18 +78,16 @@ export default function Home(){
                             <div className='img-seta-direita-fx2'>
                                 <img className='img-seta-produto' src={SetaDireira} alt=''></img>
                             </div>
-                        </div>
-                {/* 
-                    <section>
-                        <div class='mapinha'>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.404723282801!2d-46.7146446!3d-23.7329428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4ef95a0dc691%3A0x102a145c722a28aa!2sRua%20Acaccio%20Fontoura%2C%20336%20-%20Jardim%20Vista%20Alegre%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004831-050!5e0!3m2!1spt-BR!2sbr!4v1654141388401!5m2!1spt-BR!2sbr" width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <p class='texto-m'>Rua chala zingerevetz  jardim-guarujá , São paulo-sp , 058736-030,Brasil</p>
-                        </div>
-                    </section> */}
-
-                       
-                </section>
+                        </div> 
+                        <div className='textos'>
+                         <h1 className='TITULO'>QUEM NÓS SOMOS ? </h1>
+                         <p className ='p1'> A oficina do celular foi criada em 2015 por Bruno Marques Vieira  ele criou a empresa com o intuito de fazer algo que ele gostava e ainda assim resolver algo que via como um deficete no cotidiano das pessoas ao seu redor como uma manutenção de qualidade e com preços acessivel ao cliente , com um serviço honesto. </p>
+                          <p className='p2'>Então ele saiu em busca dos melhores fornecedores de algunns contatos na área e no meio dessa correria toda ainda sim fez varios cursos  complementares para fornecer o melhor atendimento possivel para seus clientes e depois de muitas falhas e acertos ele conseguiu fazer sua tão esperada loj atingindo seu proposito. </p>
+                        <p className = 'p3'>Agora seu  foco é na expansão e levar os excelentes serviços dele para outros lugares e virar um nome cada vez mais conhecido e temido no mercado. </p>
+                    </div>
+                    
+            </section>
             </main>
         </div>
-    )
-}
+)
+}    
