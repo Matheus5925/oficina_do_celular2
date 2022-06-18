@@ -80,10 +80,10 @@ export default function Home(){
                             </div>
                         </div> 
                         <div className='textos'>
-                         <h1 className='TITULO'>QUEM NÓS SOMOS </h1>
-                         <p className ='p1'> A oficina do celular foi criada em 2015 por Bruno Marques Vieira  ele criou a empresa com o intuito de fazer algo que ele gostava e ainda assim resolver algo que via como um deficete no cotidiano das pessoas ao seu redor como uma manutenção de qualidade e com preços acessivel ao cliente , com um serviço honesto </p>
-                          <p className='p2'>Então ele saiu em busca dos melhores fornecedores de algunns contatos na área e no meio dessa correria toda ainda sim fez varios cursos  complementares para fornecer o melhor atendimento possivel para seus clientes e depois de muitas falhas e acertos ele conseguiu fazer sua tão esperada loj atingindo seu proposito </p>
-                        <p className = 'p3'>Agora seu  foco é na expansão e levar os excelentes serviços dele para outros lugares e virar um nome cada vez mais conhecido e temido no mercado </p>
+                         <h1 className='TITULO'>QUEM NÓS SOMOS ? </h1>
+                         <p className ='p1'> A oficina do celular foi criada em 2015 por Bruno Marques Vieira  ele criou a empresa com o intuito de fazer algo que ele gostava e ainda assim resolver algo que via como um deficete no cotidiano das pessoas ao seu redor como uma manutenção de qualidade e com preços acessivel ao cliente , com um serviço honesto. </p>
+                          <p className='p2'>Então ele saiu em busca dos melhores fornecedores de algunns contatos na área e no meio dessa correria toda ainda sim fez varios cursos  complementares para fornecer o melhor atendimento possivel para seus clientes e depois de muitas falhas e acertos ele conseguiu fazer sua tão esperada loj atingindo seu proposito. </p>
+                        <p className = 'p3'>Agora seu  foco é na expansão e levar os excelentes serviços dele para outros lugares e virar um nome cada vez mais conhecido e temido no mercado. </p>
                     </div>
             </section>
             </main>
