@@ -29,7 +29,7 @@ export default function Menu(){
                 <section class="segunda-parte">
                 <Link to='/' onClick={SairClick} class="atalho-saida">
                     <img class="img-saida-topo" src={Saida} alt=""/>
-                    <p>Exit</p>
+                    <p>Sair</p>
                 </Link>
                 </section>
             </main>

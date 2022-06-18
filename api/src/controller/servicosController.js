@@ -102,7 +102,7 @@ server.delete('/servico/:id', async (req, resp) =>{
 
 // Endpoint de alteração de serviço
 
-server.put('/filmes/:id', async (req, resp) =>{
+server.put('/servicos/:id', async (req, resp) =>{
    
     try {
         const { id } = req.params;

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 import PortaSaida from '../../assets/image/Foto-saida.png';
-import { cadastrarServicos } from '../../api/servicosAPI';
+import { alterarServicos, cadastrarServicos } from '../../api/servicosAPI';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -22,15 +22,40 @@ export default function Cadastrar(){
     const [devolucao, setDevolucao] = useState('');
     const [preco, setPreco] = useState(0);
     const [problema, setProblema] = useState('');
+    const [id, setId] = useState(0);
+
 
     async function ClickCadastrar() {
           try {
-                const r = await cadastrarServicos(nome, email, cpf, MarcaCelular, ModeloCelular, entrega, 
-                devolucao, preco, problema, telefone);
-                toast.success('filme cadastrado com sucesso')
+            if (id === 0) {
+                const novoServico = await cadastrarServicos(nome, email, cpf, MarcaCelular, ModeloCelular, entrega, 
+                    devolucao, preco, problema, telefone);
+                    setId(novoServico.id)
+            }
+            else{
+                await alterarServicos(nome, email, cpf, MarcaCelular, ModeloCelular, entrega, 
+                    devolucao, preco, problema, telefone, id);
+            }
+
+                toast.success('filme cadastrado com sucesso !!')
           } catch (err) {
                 toast.warning(err.message)
           }
+    }
+
+    function NovoCadastro() {
+        setId(0);
+        setNome('');
+        setEmail('');
+        setTelefone('');
+        setCpf('');
+        setMarcaCelular('');
+        setModeloCelular('');
+        setEntrega('');
+        setDevolucao('');
+        setPreco(0);
+        setProblema('');
+
     }
 
     return(
@@ -43,7 +68,7 @@ export default function Cadastrar(){
                     <div class="saida-landing">
                         <Link to='/menu'><img class="img-saida" src={PortaSaida} alt=""/></Link>
                     </div>
-                    <form class="formulario-de-cadastro" action="" method="post">
+                    <div class="formulario-de-cadastro" >
 
                         <div class="entrada-formulario">
                             <div class="input-name">
@@ -122,12 +147,15 @@ export default function Cadastrar(){
                                 <hr  width="350" class="separa-cont-consulta"/>
                             </div>
                         </div>
-
-                        <div class="botao-login">
-                            <button onClick={ClickCadastrar}> Cadastrar </button>
-                        </div>
-                        
-                    </form>
+                    </div>
+                    <div className='botoes form-row'>
+                                <div className='botao-login'>
+                                    <button onClick={ClickCadastrar}> {id === 0 ? 'Cadastrar' : 'Alterar'} </button>
+                                </div>
+                                <div className='botao-login'>
+                                     <button onClick={NovoCadastro}> Novo </button>
+                                </div>
+                    </div>
                 </section>
             </main>
         </div>

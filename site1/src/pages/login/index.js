@@ -43,7 +43,7 @@ export default function Login(){
             <main>
                 <Link to='/home' class="atalho-saida">
                     <img class="img-saida-topo" src={Saida} alt=""/>
-                    <p>Exit</p>
+                    <p>Sair</p>
                 </Link>
                 <div class="cont-principal">
                     <div class="logo-empresa">
