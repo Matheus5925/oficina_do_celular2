@@ -39,12 +39,12 @@ export default function Consultar(){
                     label: 'Sim',
                     onClick: async () => {
                         const resp = await DeletarServico(id, nome)
-                        if (filtroNome === '') 
+                        if (filtroNome === '') {
                             ConsultarTodos();
+                            toast.dark('filme removido!!')
+                        }
                         else
                             ConsultarNome();
-                
-                        toast('filme removido!!')
                     }
                 },
                 {
@@ -119,7 +119,7 @@ export default function Consultar(){
                                     <button onClick={e => 
                                         {e.stopPropagation();
                                          removerServico(item.id, item.nome)}}>
-                                        <img className='edit-delete-consult' src={ deletarConsulta} alt=""/>
+                                        <img className='edit-delete-consult' src={deletarConsulta} alt=""/>
                                     </button>
                                 </td>
                             </tr>

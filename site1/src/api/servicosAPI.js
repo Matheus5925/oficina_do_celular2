@@ -5,6 +5,7 @@ const api = axios.create({
 
 export async function cadastrarServicos(nome, email, cpf, MarcaCelular, ModeloCelular, entrega, 
     devolucao, preco, problema, telefone) {
+    
     const resposta = await api.post('/servicos', {
         nome: nome,
         email: email,

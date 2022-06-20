@@ -1,4 +1,5 @@
 .Pagina-consultar{
+    background-size: 100%;
    
     
     main{
@@ -53,6 +54,7 @@
         width: 100%;
         border-collapse: collapse;
         margin-top: 40px;
+        position: sticky;
     }
     
     .edit-delete-consult{
@@ -107,6 +109,11 @@
         height: 30px;
         width: 30px;
         cursor: pointer;
+    }
+
+    tbody{
+        background: scroll;
+        max-height: 15em;
     }
 
     th {

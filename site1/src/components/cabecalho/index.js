@@ -29,7 +29,6 @@ export default function Cabecalho() {
                 </div>
                 <div className='dados-funcionario-header'>
                     <a href="" className='nome-funcionario'>{funcionario}</a>
-                    <a href="" className='status-funcionario'>Status</a>
                 </div>
             </div>
         </header>

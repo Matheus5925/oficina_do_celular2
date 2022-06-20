@@ -42,7 +42,7 @@ export default function Cadastrar(){
         setMarcaCelular(res.Marca);
         setModeloCelular(res.Modelo);
         setEntrega(res.Entrega.substr(0, 10));
-        setDevolucao(res.Devolução);
+        setDevolucao(res.Devolução.substr(0, 10));
         setPreco(res.Preço);
         setProblema(res.Defeito);
         setTelefone(res.Telefone);
@@ -56,6 +56,7 @@ export default function Cadastrar(){
                 const novoServico = await cadastrarServicos(nome, email, cpf, MarcaCelular, ModeloCelular, entrega, 
                     devolucao, preco, problema, telefone);
                     setId(novoServico.id)
+
                     toast.success(' Serviço cadastrado com sucesso !!')
             }
             else{
@@ -64,9 +65,8 @@ export default function Cadastrar(){
                     toast.success(' Serviço alterado com sucesso !!')
             }
 
-
           } catch (err) {
-                toast(err.message)
+                toast(err.response.data.erro)
           }
     }
 
@@ -178,12 +178,8 @@ export default function Cadastrar(){
                         </div>
                     </div>
                     <div className='botoes form-row'>
-                                <div className='botao-login'>
-                                    <button onClick={ClickCadastrar}> {id === 0 ? 'Cadastrar' : 'Alterar'} </button>
-                                </div>
-                                <div className='botao-login'>
-                                     <button onClick={NovoCadastro}> Novo </button>
-                                </div>
+                                <button onClick={ClickCadastrar}> {id === 0 ? 'Cadastrar' : 'Alterar'} </button>
+                                <button onClick={NovoCadastro}> Novo </button>
                     </div>
                 </section>
             </main>

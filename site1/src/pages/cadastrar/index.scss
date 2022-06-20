@@ -55,23 +55,21 @@
     
     .botoes{
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+        gap: 20px;
     }
     
-
-
-    
-    .botao-login > button {
+     button {
         margin-top: 2em;
         color: #f0f8ff !important;
         font-family: Arial, Helvetica, sans-serif;
         border-radius: 5em;
-        background-color: #201F20;
+        background: linear-gradient(93deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(77,93,250,1) 100%);
         width: 8em;
         padding: 0.8em 0.5em;
         text-align: center;
     }
+
+   
 
    
 
@@ -94,14 +92,10 @@
         color: #ff0000;
         font-size: 16px;
     }
-    .botao-login{
-        display: flex;
-        flex-direction: row;
-    }
+    
 
-    .botao-login:hover > button {
+     button:hover {
         transform: scale(1.1);
-        background-color: #525252;
     }
 
     @media (max-width: 1440px) {
