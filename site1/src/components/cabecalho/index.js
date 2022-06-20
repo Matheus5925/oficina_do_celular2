@@ -20,16 +20,16 @@ export default function Cabecalho() {
 
     return(
         <header className='cont-Cabecalho'>
-            <div class="conteudo-header">
-                <div class="img-seta-div">
-                    <img class="img-seta" src={setaFuncionario} alt=""/>
+            <div className='conteudo-header'>
+                <div className='img-seta-div'>
+                    <img className='img-seta' src={setaFuncionario} alt=""/>
                 </div>
                 <div className='funcionario'>
                     <span>{funcionario[0]}</span>
                 </div>
-                <div class="dados-funcionario-header">
-                    <a href="" class="nome-funcionario">{funcionario}</a>
-                    <a href="" class="status-funcionario">Status</a>
+                <div className='dados-funcionario-header'>
+                    <a href="" className='nome-funcionario'>{funcionario}</a>
+                    <a href="" className='status-funcionario'>Status</a>
                 </div>
             </div>
         </header>

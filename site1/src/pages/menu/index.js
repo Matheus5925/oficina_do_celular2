@@ -26,9 +26,9 @@ export default function Menu(){
            
             <main>
                 <DashbordLateral></DashbordLateral>
-                <section class="segunda-parte">
-                <Link to='/' onClick={SairClick} class="atalho-saida">
-                    <img class="img-saida-topo" src={Saida} alt=""/>
+                <section className= 'segunda-parte'>
+                <Link to='/' onClick={SairClick} className='atalho-saida'>
+                    <img className='img-saida-topo' src={Saida} alt=""/>
                     <p>Sair</p>
                 </Link>
                 </section>

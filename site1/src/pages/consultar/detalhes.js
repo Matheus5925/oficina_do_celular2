@@ -2,103 +2,117 @@ import './detalhes.scss';
 import '../../common/common.scss'
 import Cabecalho from '../../components/cabecalho';
 import DashbordLateral from '../../components/lateral';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { BuscaId } from '../../api/servicosAPI';
 
 
 
 import PortaSaida from '../../assets/image/Foto-saida.png';
+import { useEffect, useState } from 'react';
 
 export default function ConsultaDetalhes(){
+    const [servico, setServico] = useState({});
+
+    const { idParam } = useParams();
+
+    useEffect(() =>{
+        CarregarServico();
+    }, [])
+
+    async function CarregarServico() {
+        const resposta = await BuscaId(idParam);
+        setServico(resposta);
+
+    }
+
     return(
         <div className="Pagina-cadastrar">
            <Cabecalho></Cabecalho>
             <main>
                <DashbordLateral></DashbordLateral>
-                <section class="form-parte2">
-                    <div class="saida-landing">
+                <section className='form-parte2'>
+                    <div className='saida-landing'>
                         <Link to='/consultar'><img class="img-saida" src={PortaSaida} alt=""/></Link>
                     </div>
-                    <form class="formulario-de-cadastro" action="" method="post">
+                    <div className='formulario-de-cadastro'>
 
-                        <div class="entrada-formulario">
-                            <div class="input-name">
+                        <div className='entrada-formulario'>
+                            <div className='input-name'>
                                 <label><strong>Nome:</strong></label>
-                                <input type="text" name="nome" id="nome_cliente"/>
+                                <p>{servico.nome}</p>
                                 <hr  width="350" class="separa-cont-consulta"/>
                             </div>
                             <div>
-                                <div class="input-name">
+                                <div className='input-name'>
                                     <label><strong>E-mail:</strong></label>
-                                    <input type="email" name="e-mail" id="email_cliente"/>
+                                    <p>{servico.Email}</p>
                                     <hr  width="350" class="separa-cont-consulta"/>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="entrada-formulario">
-                            <div class="input-name">
+                        <div className='entrada-formulario'>
+                            <div className='input-name'>
                                 <label><strong>Telefone de contato:</strong></label>
-                                <input type="tel" name="tel-contato" id="tel-cliente"/>
+                                <p>{servico.Telefone}</p>
                                 <hr  width="320" class="separa-cont-consulta"/>
                             </div>
                             <div>
-                                <div class="input-name">
+                                <div className='input-name'>
                                     <label><strong>CPF:</strong></label>
-                                    <input type="text" name="cpf" 
-                                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
-                                    title="Digite um CPF no formato: xxx.xxx.xxx-xx" maxlength="14"/>
+                                    <p>{servico.cpf}</p>
                                     <hr  width="350" class="separa-cont-consulta"/>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="entrada-formulario">
-                            <div class="input-name">
+                        <div className='entrada-formulario'>
+                            <div className='input-name'>
                                 <label><strong>Marca do celular:</strong></label>
-                                <input type="text" name="marca-do-celular" id="marca_celular_cliente"/>
+                               <p>{servico.Marca}</p>
                                 <hr  width="350" class="separa-cont-consulta"/>
                             </div>
                             <div>
-                                <div class="input-name">
+                                <div className='input-name'>
                                     <label><strong>Modelo do celular:</strong></label>
-                                    <input type="text" name="mode_celular" id="modelo_celular_cliente"/>
+                                    <p>{servico.Modelo}</p>
                                     <hr  width="350" class="separa-cont-consulta"/>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="entrada-formulario  data-preço">
-                            <div class="input-name">
+                        <div className='entrada-formulario  data-preço'>
+                            <div className='input-name'>
                                 <label><strong>Data entrega na loja:</strong></label>
-                                <input type="date" name="data-entrega-loja" id="data_entrega_loja_cliente"/>
+                               <p>{servico.Entrega && servico.Entrega.substr(0, 10)}</p>
                                 <hr  width="220" class="separa-cont-consulta"/>
                             </div>
                             <div>
-                                <div class="input-name">
+                                <div className= 'input-name'>
                                     <label><strong>Data devolução cliente:</strong></label>
-                                    <input type="date" name="data-devolu-cliente" id="data_devolu_cliente"/>
+                                    <p>{servico.Devolução && servico.Devolução.substr(0, 10)}</p>
                                     <hr  width="250" class="separa-cont-consulta"/>
                                 </div>
                             </div>
                             <div>
-                                <div class="input-name">
+                                <div className='input-name'>
                                     <label><strong>Preço final:</strong></label>
-                                    <input type="text"  placeholder='R$'></input>
+                                    <p>{servico.Preço}</p>
                                     <hr  width="200" class="separa-cont-consulta"/>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="entrada-formulario">
-                            <div class="input-name">
+                        <div className='entrada-formulario'>
+                            <div className='input-name'>
                                 <label><strong>Problema celular:</strong></label>
-                                <textarea class="problema-cllr" cols="30" rows="10"></textarea>
+                                <p>{servico.Defeito}</p>
                                 <hr  width="350" class="separa-cont-consulta"/>
                             </div>
                         </div>
                         
-                    </form>
+                    </div>
                 </section>
             </main>
         </div>

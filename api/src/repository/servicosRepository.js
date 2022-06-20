@@ -56,6 +56,25 @@ export async function DeletarServico(id) {
     return resposta;
 }
 
+export async function BuscarporId(id) {
+    const comando = `select id_servicos as id,
+    nm_cliente as nome,
+    ds_email_cliente as Email,
+    ds_cpf as cpf,
+    ds_marca_celular as Marca,
+    ds_modelo_cel as Modelo,
+    dt_entrega as Entrega,
+    dt_devolucao as Devolução,
+    vl_preco as Preço,
+    ds_problema_cel as Defeito,
+    ds_telefone as Telefone
+from tb_servicos
+where id_servicos = ?`
+
+const [ resposta ] = await (await con).query(comando, [id]);
+return resposta[0];
+}
+
 
 export async function AlterarServicos(id, servicos) {
     const comando = 

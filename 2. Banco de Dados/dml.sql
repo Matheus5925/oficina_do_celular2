@@ -47,7 +47,23 @@ select id_servicos as id,
 			ds_email_cliente = "gabiueda@gmail.com", ds_cpf = "54623012525",
             ds_marca_celular = "Sansung", ds_modelo_cel = "A10",
             dt_entrega = "2022-03-05", dt_devolucao = "2022-03-12",
-            vl_preco = 150.5, ds_problema_cel= "Tela e placa", ds_telefone = "11985858557" where id_servicos = 1;    
+            vl_preco = 150.5, ds_problema_cel= "Tela e placa", ds_telefone = "11985858557" where id_servicos = 1; 
+
+
+    -- CSU(5.1) Buscar por id
+select id_servicos as id,
+		nm_cliente as nome,
+        ds_email_cliente as Email,
+        ds_cpf as cpf,
+        ds_marca_celular as Marca,
+        ds_modelo_cel as Modelo,
+        dt_entrega as Entrega,
+        dt_devolucao as Devolução,
+        vl_preco as Preço,
+        ds_problema_cel as Defeito,
+        ds_telefone as Telefone
+from tb_servicos
+	where id_servicos = 5;   
     
         
 

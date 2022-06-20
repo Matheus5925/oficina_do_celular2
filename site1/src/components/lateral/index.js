@@ -6,21 +6,21 @@ import LupaLateral from '../../assets/image/logo-consulta-novo.png';
 
 export default function DashbordLateral() {
     return(
-        <section class="lateral-consulta">
-                <div class="dahsboard-lateral">
-                    <div class="cadastro-consulta">
+        <section className='lateral-consulta'>
+                <div className='dahsboard-lateral'>
+                    <div className= 'cadastro-consulta'>
                         <Link to='/cadastrar'> Cadastro </Link>
-                        <img class="imgs-cadas-consult" src={FuncionarioEntrar} alt=""/>
+                        <img className='imgs-cadas-consult' src={FuncionarioEntrar} alt=""/>
                     </div>
 
-                    <hr class="linha-divisoria"></hr>
+                    <hr className='linha-divisoria'></hr>
 
-                    <div class="cadastro-consulta">
+                    <div className='cadastro-consulta'>
                         <Link to='/consultar'> Consulta </Link>
-                        <img class="imgs-cadas-consult" src={LupaLateral} alt=""/>
+                        <img className='imgs-cadas-consult' src={LupaLateral} alt=""/>
                     </div>
 
-                    <hr class="linha-divisoria"></hr>
+                    <hr className='linha-divisoria'></hr>
                     
 
                 </div>

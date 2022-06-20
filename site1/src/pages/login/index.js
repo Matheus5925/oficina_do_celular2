@@ -41,15 +41,15 @@ export default function Login(){
     return(
         <div className="Pagina-login">
             <main>
-                <Link to='/home' class="atalho-saida">
-                    <img class="img-saida-topo" src={Saida} alt=""/>
+                <Link to='/home' className='atalho-saida'>
+                    <img className='img-saida-topo' src={Saida} alt=""/>
                     <p>Sair</p>
                 </Link>
-                <div class="cont-principal">
-                    <div class="logo-empresa">
+                <div className='cont-principal'>
+                    <div className='logo-empresa'>
                         <img class="logo-empresa-img" src={logoLogin} alt=""/> 
                     </div>
-                    <div class="caixas-entrada">
+                    <div className='caixas-entrada'>
                         <input type="email" placeholder='E-mail' value={email} onChange={e => setEmail(e.target.value)}></input>
                         <input type='password' placeholder='***' value={senha} onChange={e => setSenha(e.target.value)}></input>
                     </div>
@@ -57,7 +57,7 @@ export default function Login(){
                         {erro}
                     </div>
                     
-                    <div class="botao-login">
+                    <div className='botao-login'>
                         <button onClick={ClickEntrar}> Entrar </button>
                     </div>
                 </div>

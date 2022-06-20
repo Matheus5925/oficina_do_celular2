@@ -2,14 +2,14 @@ import './index.scss';
 import '../../common/common.scss'
 import Cabecalho from '../../components/cabecalho';
 import DashbordLateral from '../../components/lateral';
-import { useState} from 'react'
-import { Link } from 'react-router-dom';
+import { useEffect, useState} from 'react'
+import { Link, useParams} from 'react-router-dom';
 
 
 import PortaSaida from '../../assets/image/Foto-saida.png';
-import { alterarServicos, cadastrarServicos } from '../../api/servicosAPI';
+import { alterarServicos, BuscaId, cadastrarServicos } from '../../api/servicosAPI';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Cadastrar(){
     const [nome, setNome] = useState('');
@@ -24,6 +24,31 @@ export default function Cadastrar(){
     const [problema, setProblema] = useState('');
     const [id, setId] = useState(0);
 
+    
+
+    const {idparams} = useParams();
+
+    useEffect(() =>{
+        if (idparams) {
+            CarregarServico();
+        }
+    }, [])
+
+    async function CarregarServico() {
+        const res = await BuscaId(idparams)
+        setNome(res.nome);
+        setEmail(res.Email);
+        setCpf(res.cpf);
+        setMarcaCelular(res.Marca);
+        setModeloCelular(res.Modelo);
+        setEntrega(res.Entrega.substr(0, 10));
+        setDevolucao(res.Devolução);
+        setPreco(res.Preço);
+        setProblema(res.Defeito);
+        setTelefone(res.Telefone);
+        setId(res.id)
+    }
+
 
     async function ClickCadastrar() {
           try {
@@ -31,17 +56,21 @@ export default function Cadastrar(){
                 const novoServico = await cadastrarServicos(nome, email, cpf, MarcaCelular, ModeloCelular, entrega, 
                     devolucao, preco, problema, telefone);
                     setId(novoServico.id)
+                    toast.success(' Serviço cadastrado com sucesso !!')
             }
             else{
                 await alterarServicos(nome, email, cpf, MarcaCelular, ModeloCelular, entrega, 
                     devolucao, preco, problema, telefone, id);
+                    toast.success(' Serviço alterado com sucesso !!')
             }
 
-                toast.success('filme cadastrado com sucesso !!')
+
           } catch (err) {
-                toast.warning(err.message)
+                toast(err.message)
           }
     }
+
+    
 
     function NovoCadastro() {
         setId(0);

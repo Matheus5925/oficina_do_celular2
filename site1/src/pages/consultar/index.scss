@@ -96,6 +96,19 @@
         padding-top: 2em;
     }
 
+    .caixa-entrada > button {
+        background-color: #0004f4;
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .lupa-consulta{
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
     th {
         color: #000000 !important;
         font-size: 18px;
