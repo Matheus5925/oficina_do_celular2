@@ -1,27 +1,28 @@
-import './index.scss';
-import '../../common/common.scss'
+// import './index.scss';
+// import '../../common/common.scss'
 
-import ImgMenuHome from '../../assets/image/logo-menu-home.png';
-//import ImgOndasUm from '../../assets/image/Primeiraonda-landingpage.png';
-import foneBlue from '../../assets/image/fone-produto.png';
-import Caixinha from '../../assets/image/caixasom-produto.png';
-import Carregador from '../../assets/image/carregador-portatil.png';
-import relogio from '../../assets/image/relogio-produto.png';
-import SetaEsquerda from '../../assets/image/porta-2.png';
-import SetaDireira from '../../assets/image/porta-1.png';
-import iphone from '../../assets/image/iphone.png';
-import lg from '../../assets/image/lg.png';
-import samsung from '../../assets/image/samsung.png';
-import mi from '../../assets/image/mi.png';
-import conserto  from '../../assets/image/conserto.png';
-import motorola from '../../assets/image/motorola.png'
+// import ImgMenuHome from '../../assets/image/logo-menu-home.png';
+// //import ImgOndasUm from '../../assets/image/Primeiraonda-landingpage.png';
+// import foneBlue from '../../assets/image/fone-produto.png';
+// import Caixinha from '../../assets/image/caixasom-produto.png';
+// import Carregador from '../../assets/image/carregador-portatil.png';
+// import relogio from '../../assets/image/relogio-produto.png';
+// import SetaEsquerda from '../../assets/image/porta-2.png';
+// import SetaDireira from '../../assets/image/porta-1.png';
+// import iphone from '../../assets/image/iphone.png';
+// import lg from '../../assets/image/lg.png';
+// import samsung from '../../assets/image/samsung.png';
+// import mi from '../../assets/image/mi.png';
+// import conserto  from '../../assets/image/conserto.png';
+// import motorola from '../../assets/image/motorola.png'
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Home(){
     return(
         <div className="Pagina-home">
-                <main>
+                 <main>
+                    {/*
                     <section className='faixa-1'>
                         <header className='header-fx1'>
                             <div className='menu-home'>
@@ -126,7 +127,7 @@ export default function Home(){
 
 </footer>
 
-                
+                 */}
             </main>
         </div>
     )}
