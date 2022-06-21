@@ -7,7 +7,7 @@ import { Link, useParams} from 'react-router-dom';
 
 
 import PortaSaida from '../../assets/image/Foto-saida.png';
-import { alterarServicos, BuscaId, cadastrarServicos } from '../../api/servicosAPI';
+import { alterarServicos, BuscaId, cadastrarServicos, ConsultarTodosServicos } from '../../api/servicosAPI';
 import { ToastContainer, toast } from 'react-toastify';
 
 
@@ -69,7 +69,7 @@ export default function Cadastrar(){
                 toast(err.response.data.erro)
           }
     }
-
+   
     
 
     function NovoCadastro() {
