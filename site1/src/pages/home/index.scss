@@ -125,14 +125,14 @@
         height: 50px;
         width: 50px;
     }
-    .faixa2{
+    .faixa3{
         display: flex;
         flex-direction: row;
         background-image: url('../../assets/image/Design\ sem\ nome\ \(5\)\ 1.png');
         background-repeat: no-repeat;
         margin-top: 2em;
         background-size: 100%;
-        height: 50vh;
+        height: 25em;
         width: 100%;
     }
 
@@ -181,16 +181,12 @@
       
       
     }
-        
-        
-    
 
       .logotipo-rodape{ 
         
         display: flex;
         flex-direction: row;
-        justify-content:space-around;
-        
+        justify-content:space-around;        
 
      }
 
@@ -207,5 +203,55 @@
          flex-direction: column;
      }
     
-   
+     .faixa4{
+        height: 30em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+     }
+    
+    .mapinha{
+        height: 25em;
+        width: 60em;
+    }
+
+    .rodapé{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-image: url('../../assets/image/Design\ sem\ nome\ \(5\)\ 1.png');
+        background-repeat: no-repeat;
+        margin-top: 2em;
+        background-size: 100%;
+        width: 100%;
+        height: 13em;
+    }
+
+    .logo-site-rodape{
+        height: 10em;
+        width: 10em;
+    }
+
+    .logos-marcas > img {
+        height: 3em;
+        width: 4em;
+    }
+
+    .logos-marcas{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-link{
+        width: 17em;
+        height: 5em;
+    }
 }

@@ -2,7 +2,14 @@
  import '../../common/common.scss'
 
  import ImgMenuHome from '../../assets/image/logo-menu-home.png';
- import ImgOndasUm from '../../assets/image/Primeiraonda-landingpage.png';
+ import Apple from '../../assets/image/logo-apple.png';
+ import Samsung from '../../assets/image/samsung-logo.png';
+ import Xiaomi from '../../assets/image/xiaomi-logo.png';
+ import LG from '../../assets/image/logo-lg.png';
+ import LinkInsta from '../../assets/image/link-instagram.png'
+ import LinkWhats from '../../assets/image/link-whats.png'
+ import Motorola from '../../assets/image/motorola-logo.png';
+ import boneco from '../../assets/image/boneco-logo-rodape.png'
  import foneBlue from '../../assets/image/fone-produto.png';
  import Caixinha from '../../assets/image/caixasom-produto.png';
  import Carregador from '../../assets/image/carregador-portatil.png';
@@ -82,7 +89,7 @@ export default function Home(){
                                 </div>
                             </div>
                 </section>
-                <section className='faixa2'>
+                <section className='faixa3'>
                           
                         <div className='textos'>
                             <h1 className='TITULO'> QUEM NÓS SOMOS ? </h1>
@@ -94,7 +101,27 @@ export default function Home(){
                         <div className='imagem'>
                                 <img  className='tecnico' src={Tecnico} alt='' ></img>    
                         </div>
-                </section>   
+                </section>
+                <section className='faixa4'>
+                    <iframe className='mapinha' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.4095914651007!2d-46.714486799999996!3d-23.7327691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4ef95078ef9d%3A0xf68bef1ada5f2698!2sRua%20Acaccio%20Fontoura%2C%20339%20-%20Jardim%20Santa%20Rita%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004831-050!5e0!3m2!1spt-BR!2sbr!4v1655837880793!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+                <footer className='rodapé'>
+                    <div className='logo-oficina'>
+                        <img className='logo-site-rodape' src={boneco} alt=''></img>
+                    </div>
+                    <div className='logos-marcas'>
+                        <img className='logo-site-rodape' src={Apple} alt=''></img>
+                        <img className='logo-samsung' src={Samsung} alt=''></img>
+                        <img className='logo-site-rodape' src={LG} alt=''></img>
+                        <img className='logo-site-rodape' src={Xiaomi} alt=''></img>
+                        <img className='logo-site-rodape' src={Motorola} alt=''></img>
+                    </div>
+                    <div className='links'>
+                        <a href=''><img className='logo-link' src={LinkInsta} alt=''></img></a>
+                        <a href=''><img className='logo-link' src={LinkWhats} alt=''></img></a>
+                    </div>
+                    
+                </footer>
             </main>
         </div>
     )
