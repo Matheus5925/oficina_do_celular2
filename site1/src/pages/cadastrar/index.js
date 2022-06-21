@@ -102,13 +102,13 @@ export default function Cadastrar(){
                         <div class="entrada-formulario">
                             <div class="input-name">
                                 <label><strong>Nome:</strong></label>
-                                <input type="text" name="nome" id="nome_cliente" value={nome} onChange={e => setNome(e.target.value.trim())}/>
+                                <input type="text" name="nome" id="nome_cliente" value={nome} onChange={e => setNome(e.target.value.trimStart())}/>
                                 <hr  width="350" class="separa-cont-consulta"/>
                             </div>
                             <div>
                                 <div class="input-name">
                                     <label><strong>E-mail:</strong></label>
-                                    <input type="email" name="e-mail" id="email_cliente" value={email.trim()} onChange={e => setEmail(e.target.value)}/>
+                                    <input type="email" name="e-mail" id="email_cliente" value={email} onChange={e => setEmail(e.target.value.trimStart())}/>
                                     <hr  width="350" class="separa-cont-consulta"/>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@ export default function Cadastrar(){
                         <div class="entrada-formulario">
                             <div class="input-name">
                                 <label><strong>Telefone de contato:</strong></label>
-                                <input type="tel" name="tel-contato" id="tel-cliente" value={telefone.trim()} onChange={e => setTelefone(e.target.value)}/>
+                                <input type="tel" name="tel-contato" id="tel-cliente" value={telefone} onChange={e => setTelefone(e.target.value.trimStart())}/>
                                 <hr  width="320" class="separa-cont-consulta"/>
                             </div>
                             <div>
@@ -126,7 +126,7 @@ export default function Cadastrar(){
                                     <label><strong>CPF:</strong></label>
                                     <input type="text" name="cpf" 
                                     pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
-                                    title="Digite um CPF no formato: xxx.xxx.xxx-xx" maxlength="14" value={cpf.trim()} onChange={e => setCpf(e.target.value)}/>
+                                    title="Digite um CPF no formato: xxx.xxx.xxx-xx" maxlength="14" value={cpf.trim()} onChange={e => setCpf(e.target.value.trimStart())}/>
                                     <hr  width="350" class="separa-cont-consulta"/>
                                 </div>
                             </div>
@@ -135,13 +135,13 @@ export default function Cadastrar(){
                         <div class="entrada-formulario">
                             <div class="input-name">
                                 <label><strong>Marca do celular:</strong></label>
-                                <input type="text" name="marca-do-celular" id="marca_celular_cliente" value={MarcaCelular.trim()} onChange={e => setMarcaCelular(e.target.value)}/>
+                                <input type="text" name="marca-do-celular" id="marca_celular_cliente" value={MarcaCelular} onChange={e => setMarcaCelular(e.target.value.trimStart())}/>
                                 <hr  width="350" class="separa-cont-consulta"/>
                             </div>
                             <div>
                                 <div class="input-name">
                                     <label><strong>Modelo do celular:</strong></label>
-                                    <input type="text" name="mode_celular" id="modelo_celular_cliente" value={ModeloCelular.trim()} onChange={e => setModeloCelular(e.target.value)}/>
+                                    <input type="text" name="mode_celular" id="modelo_celular_cliente" value={ModeloCelular} onChange={e => setModeloCelular(e.target.value.trimStart())}/>
                                     <hr  width="350" class="separa-cont-consulta"/>
                                 </div>
                             </div>
@@ -150,13 +150,13 @@ export default function Cadastrar(){
                         <div class="entrada-formulario  data-preço">
                             <div class="input-name">
                                 <label><strong>Data entrega na loja:</strong></label>
-                                <input type="date" name="data-entrega-loja" id="data_entrega_loja_cliente" value={entrega.trim()} onChange={e => setEntrega(e.target.value)}/>
+                                <input type="date" name="data-entrega-loja" id="data_entrega_loja_cliente" value={entrega} onChange={e => setEntrega(e.target.value.trimStart())}/>
                                 <hr  width="220" class="separa-cont-consulta"/>
                             </div>
                             <div>
                                 <div class="input-name">
                                     <label><strong>Data devolução cliente:</strong></label>
-                                    <input type="date" name="data-devolu-cliente" id="data_devolu_cliente" value={devolucao.trim()} onChange={e => setDevolucao(e.target.value)}/>
+                                    <input type="date" name="data-devolu-cliente" id="data_devolu_cliente" value={devolucao} onChange={e => setDevolucao(e.target.value.trimStart())}/>
                                     <hr  width="250" class="separa-cont-consulta"/>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@ export default function Cadastrar(){
                         <div class="entrada-formulario">
                             <div class="input-name">
                                 <label><strong>Problema celular:</strong></label>
-                                <textarea class="problema-cllr" cols="30" rows="10" value={problema.trim()} onChange={e => setProblema(e.target.value)}></textarea>
+                                <textarea class="problema-cllr" cols="30" rows="10" value={problema} onChange={e => setProblema(e.target.value.trimStart())}></textarea>
                                 <hr  width="350" class="separa-cont-consulta"/>
                             </div>
                         </div>
