@@ -7,6 +7,8 @@
     
  
     
+    
+     
     .faixa-1{
         display: flex;
         flex-direction: column;
@@ -253,5 +255,18 @@
     .logo-link{
         width: 17em;
         height: 5em;
+    }
+}
+
+@media (max-width: 1280px) { 
+    .faixa-1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 1000px;
+        background-image: url('../../assets/image/imagem-\ fx1\ 1.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    
     }
 }
