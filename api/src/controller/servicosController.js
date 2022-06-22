@@ -8,7 +8,6 @@ const server = Router();
 server.post('/servicos', async (req, resp) =>{
     try {
             const servicos = req.body;
-            const result = await Servicos(servicos)
 
             if (!servicos.nome) 
                 throw new Error ("Nome obrigátorio")
@@ -28,6 +27,8 @@ server.post('/servicos', async (req, resp) =>{
                 throw new Error("Os defeitos do aparelho são obrigátorio");
             if (!servicos.telefone) 
                 throw new Error("Telefone para contato obrigátorio")
+
+            const result = await Servicos(servicos)
             resp.send(result)
         
         
