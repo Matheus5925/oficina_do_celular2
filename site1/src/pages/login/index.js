@@ -41,7 +41,7 @@ export default function Login(){
     return(
         <div className="Pagina-login">
             <main>
-                <Link to='/home' className='atalho-saida'>
+                <Link to='/' className='atalho-saida'>
                     <img className='img-saida-topo' src={Saida} alt=""/>
                     <p>Sair</p>
                 </Link>

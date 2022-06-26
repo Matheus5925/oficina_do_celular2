@@ -15,7 +15,7 @@ export default function Menu(){
 
     function SairClick() {
         storage.remove('usuario-logado');
-        navigate('/')
+        navigate('/login')
 
     }
 
@@ -27,7 +27,7 @@ export default function Menu(){
             <main>
                 <DashbordLateral></DashbordLateral>
                 <section className= 'segunda-parte'>
-                <Link to='/' onClick={SairClick} className='atalho-saida'>
+                <Link to='/login' onClick={SairClick} className='atalho-saida'>
                     <img className='img-saida-topo' src={Saida} alt=""/>
                     <p>Sair</p>
                 </Link>

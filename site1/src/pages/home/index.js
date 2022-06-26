@@ -1,5 +1,7 @@
  import './index.scss';
  import '../../common/common.scss'
+ import storage from 'local-storage';
+ import { useNavigate } from 'react-router-dom';
 
  import ImgMenuHome from '../../assets/image/logo-menu-home.png';
  import Apple from '../../assets/image/logo-apple.png';
@@ -15,25 +17,36 @@
  import Carregador from '../../assets/image/carregador-portatil.png';
  import relogio from '../../assets/image/relogio-produto.png';
  import SetaEsquerda from '../../assets/image/porta-2.png';
-import SetaDireira from '../../assets/image/porta-1.png';
-import Tecnico from '../../assets/image/tecnico.png'
+ import SetaDireira from '../../assets/image/porta-1.png';
+ import Tecnico from '../../assets/image/tecnico.png'
+ import PortaEntrada from '../../assets/image/porta-home.png'
  import { Link } from 'react-router-dom';
 
 export default function Home(){
+    const navigate = useNavigate()
+
+    function VerificarLoginParaOMenu() {
+        if (!storage('usuario-logado')) {
+            navigate('/login')
+        } else{
+            navigate('/menu')
+        }
+    }
+
     return(
         <div className="Pagina-home">
                  <main>
                 
                     <section className='faixa-1'>
                         <header className='header-fx1'>
-                            <div className='menu-home'>
+                            <div onClick={VerificarLoginParaOMenu} className='menu-home'>
                                 <img className='img-menu-home' src={ImgMenuHome} alt=''></img>
                                 <p>Menu</p>
                             </div>
                             
                             <Link to='/' className='login-home'>
                                 <a>Login</a>
-                                
+                                <img className='img-menu-home'  src={PortaEntrada} alt=''></img>
                             </Link>
                         </header>
                         <main className='main-fx1'>
