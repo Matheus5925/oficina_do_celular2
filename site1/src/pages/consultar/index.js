@@ -68,6 +68,10 @@ export default function Consultar(){
         setServicos(resp);
     }
 
+    useEffect(() =>{
+        ConsultarNome();
+    }, [filtroNome])
+
     async function ConsultarTodos() {
         const resp = await ConsultarTodosServicos();
         setServicos(resp);

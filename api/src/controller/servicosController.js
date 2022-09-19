@@ -10,27 +10,26 @@ server.post('/servicos', async (req, resp) =>{
             const servicos = req.body;
 
             if (!servicos.nome) 
-                throw new Error ("Nome obrigátorio")
+                throw new Error ("Nome obrigátorio");
             if (!servicos.email) 
-                throw new Error("Email obrigátorio")
+                throw new Error("Email obrigátorio");
             if (!servicos.cpf) 
-                throw new Error("cpf obrigátorio")
+                throw new Error("cpf obrigátorio");
             if (!servicos.MarcaCelular) 
-                throw new Error("Marca do Dispositivo obrigátorio")
+                throw new Error("Marca do Dispositivo obrigátorio");
             if (!servicos.ModeloCelular) 
-                throw new Error("Modelo do Dispositivo obrigátorio")
+                throw new Error("Modelo do Dispositivo obrigátorio");
             if (!servicos.preco)
                 throw new Error("Preço obrigátorio");
             if (Number(servicos.preco) <= -1)
-                throw new Error('Só pode números positivos!!')
+                throw new Error('Só pode números positivos!!');
             if (!servicos.problema) 
                 throw new Error("Os defeitos do aparelho são obrigátorio");
             if (!servicos.telefone) 
-                throw new Error("Telefone para contato obrigátorio")
+                throw new Error("Telefone para contato obrigátorio");
 
             const result = await Servicos(servicos)
             resp.send(result)
-        
         
     } catch (err) {
         resp.status(400).send({

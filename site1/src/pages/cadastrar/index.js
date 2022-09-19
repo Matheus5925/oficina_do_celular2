@@ -50,12 +50,12 @@ export default function Cadastrar(){
     }
 
 
-    async function ClickCadastrar() {
+    const ClickCadastrar = async () => {
           try {
             if (id === 0) {
                 const novoServico = await cadastrarServicos(nome, email, cpf, MarcaCelular, ModeloCelular, entrega, 
                     devolucao, preco, problema, telefone);
-                    setId(novoServico.id)
+                    setId(novoServico.id);
         
                     toast.success(' Serviço cadastrado com sucesso !!')
             }

@@ -44,7 +44,7 @@ export default function Home(){
                                 <p>Menu</p>
                             </div>
                             
-                            <Link to='/' className='login-home'>
+                            <Link to='/login' className='login-home'>
                                 <a>Login</a>
                                 <img className='img-menu-home'  src={PortaEntrada} alt=''></img>
                             </Link>

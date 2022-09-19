@@ -11,10 +11,10 @@ export default function Cabecalho() {
 
     useEffect(() => {
         if (!storage('usuario-logado')) {
-            navigate('/')
+            navigate('/');
         } else{
             const usuariologado = storage('usuario-logado');
-            setFuncionario(usuariologado.Nome)
+            setFuncionario(usuariologado.Nome);
         }
     }, [])
 
